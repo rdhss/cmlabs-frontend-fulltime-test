@@ -1,6 +1,11 @@
 <h1 align="center">
-  EatLah
+  Mealapp
 </h1>
+
+<div align="center">
+  <img alt="Logo" src="./src/assets/ingridient.png" />
+</div>
+
 
 ## Description
 

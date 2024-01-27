@@ -8,7 +8,7 @@ import ImageReceipts from "@/components/atoms/ImageReceipts";
 import Recipes from "@/components/atoms/Recipes";
 import VideoRecipes from "@/components/atoms/VideoRecipes";
 
-const page = () => {
+const Detail = () => {
   const [DetailFoodMenu, setDetailFoodMenu] = useState()
   const [RecipesData, setRecipesData] = useState([])
   const params = useParams()
@@ -75,4 +75,4 @@ const page = () => {
   );
 }
 
-export default page
+export default Detail

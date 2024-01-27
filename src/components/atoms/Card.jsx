@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 
 const Card = (props) => {
   const {
+    key,
     id,
     title,
     click,
@@ -13,7 +14,7 @@ const Card = (props) => {
 
 
   return (
-    <div onClick={click} className="overflow-hidden rounded-xl relative cursor-pointer">
+    <div key={key} onClick={click} className="overflow-hidden rounded-xl relative cursor-pointer">
       <div className="bg-black/40 absolute w-full h-full flex justify-center items-center">
         <p className="text-center text-white px-5">{title}</p>
       </div>

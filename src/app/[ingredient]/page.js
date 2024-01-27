@@ -7,7 +7,7 @@ import SearchInput from "@/components/atoms/SearchInput";
 import Step from "@/components/atoms/Step";
 import { useParams } from "next/navigation";
 
-const page = () => {
+const Foods = () => {
   const [listMealsMenu, setListMealsMenu] = useState([])
   const [listMealsMenuSearch, setListMealsMenuSearch] = useState([])
   const [search, setSearch] = useState('')
@@ -75,4 +75,4 @@ const page = () => {
   );
 }
 
-export default page
+export default Foods

@@ -35,14 +35,16 @@ export default function Home() {
 
 
   useEffect(() => {
-    getListFoodAPI()
+    getListFoodAPI();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  useEffect(async () => {
+  useEffect(() => {
     setLoading(true)
     setTimeout(() => {
-      searchFoodMenuAPI()
+      searchFoodMenuAPI();
     }, 1000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[search])
 
 

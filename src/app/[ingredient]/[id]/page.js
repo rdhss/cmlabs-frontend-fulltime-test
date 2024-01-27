@@ -13,8 +13,6 @@ const Detail = () => {
   const [RecipesData, setRecipesData] = useState([])
   const params = useParams()
 
-
-
   const getDetailFoodAPI = async () => {
     try {
       const response = await axiosTemplate(`lookup.php?i=${params.id}`)
@@ -24,7 +22,6 @@ const Detail = () => {
           break;
         }
         setRecipesData(old => [...old, { ingredient: response.data.meals[0][`strIngredient${i}`], measure: response.data.meals[0][`strMeasure${i}`] }])
-        console.log(i);
       }
       // strIngredient1
       // strMeasure1
@@ -37,15 +34,10 @@ const Detail = () => {
 
 
   useEffect(() => {
-    getDetailFoodAPI()
+    getDetailFoodAPI();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-
-
-  useEffect(() => {
-    console.log(DetailFoodMenu);
-    console.log(RecipesData);
-  }, [RecipesData])
 
 
 
@@ -67,10 +59,9 @@ const Detail = () => {
           <Recipes text={DetailFoodMenu?.strInstructions} data={RecipesData} />
         </div>
       </div>
-        <div className="w-full">
-          <VideoRecipes video={DetailFoodMenu?.strYoutube}/>
-        </div>
-      {/* {DetailFoodMenu} */}
+      <div className="w-full">
+        <VideoRecipes video={DetailFoodMenu?.strYoutube} />
+      </div>
     </main>
   );
 }

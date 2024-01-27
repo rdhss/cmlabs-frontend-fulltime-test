@@ -35,6 +35,7 @@ const Foods = () => {
 
   useEffect(() => {
     getListMealsAPI()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -42,6 +43,7 @@ const Foods = () => {
     setTimeout(() => {
       searchMealsMenuAPI()
     }, 1000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search])
 
 

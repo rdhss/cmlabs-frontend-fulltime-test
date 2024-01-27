@@ -14,8 +14,10 @@ const ListCard = (props) => {
         </div>
         :
         <>
-          {data?.map((item) =>
+          {data?.map((item, index) =>
+          <div key={index}>
             <Card click={() => router.push(`${item.strIngredient ? item.strIngredient : `${params.ingredient?.split('%20')?.join(' ')}/${item.idMeal}` }`)} cube={cube} id={item.idIngredient} title={item.strIngredient || item.strMeal} thumb={item.strMealThumb}/>
+          </div>
           )}
         </>
       }

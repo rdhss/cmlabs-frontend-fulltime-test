@@ -38,7 +38,7 @@ export default function Home() {
     getListFoodAPI()
   }, [])
 
-  useEffect(() => {
+  useEffect(async () => {
     setLoading(true)
     setTimeout(() => {
       searchFoodMenuAPI()

@@ -8,6 +8,7 @@ const ImageReceipts = (props) => {
             width={1000}
             height={1000}
             src={link} 
+            alt="food-img"
             />
         </div>
     )
